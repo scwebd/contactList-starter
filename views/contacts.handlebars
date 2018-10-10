@@ -1,6 +1,15 @@
 <div>
-	<a class="nav-button btn btn-primary" href="/form" role="button">Add New Contact</a>
+	<a class="nav-button btn btn-primary" href="/contacts/new" role="button">Add New Contact</a>
 	<h1>?????'s Contacts:</h1>
+</div>
+<div class="form-group">
+	<label for="filterContacts">Filter by Type</label>
+	<select id="filterContacts" class="form-control" name="contactType">
+		<option disabled selected> -- select a type -- </option>
+		<option value="">All</option>
+		<option value="Personal">Personal</option>
+		<option value="Business">Business</option>
+	</select>
 </div>
 <table class="table">
 	<thead class="thead-dark">

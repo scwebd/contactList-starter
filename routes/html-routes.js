@@ -1,4 +1,4 @@
-var path = require("path");
+var db = require("../models");
 
 module.exports = function(app) {
     // this route should render the Handlebars 'form' template

@@ -11,10 +11,9 @@ var PORT = process.env.PORT || 8080;
 // Requiring our models directory for syncing
 var db = require("./models");
 
-// Sets up the Express app to handle data parsing (needed for posts and puts)
-app.use(bodyParser.urlencoded({ extended: false }));
-// parse application/json
-app.use(bodyParser.json());
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));

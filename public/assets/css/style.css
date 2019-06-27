@@ -16,6 +16,14 @@ th {
 	float: right;
 }
 
+table {
+    table-layout: fixed;
+}
+
+td:last-child {
+    text-align: right;
+}
+
 .delete {
 	color: red;
 	cursor: pointer;

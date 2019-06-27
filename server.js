@@ -2,6 +2,7 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var logger = require("morgan");
 
 // Sets up the Express App
 // =============================================================
@@ -14,6 +15,9 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Sets up request logging
+app.use(logger("dev"));
 
 // Static directory
 app.use(express.static("public"));

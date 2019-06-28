@@ -1,7 +1,7 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var bodyParser = require("body-parser");
+var exphbs = require("express-handlebars");
 var logger = require("morgan");
 
 // Sets up the Express App
@@ -22,9 +22,7 @@ app.use(logger("dev"));
 // Static directory
 app.use(express.static("public"));
 
-// Set up Handlebars
-var exphbs = require("express-handlebars");
-
+// Sets up Handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 

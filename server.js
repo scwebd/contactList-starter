@@ -1,16 +1,16 @@
 // Dependencies
 // =============================================================
-var express = require("express");
-var exphbs = require("express-handlebars");
-var logger = require("morgan");
+const express = require("express");
+const exphbs = require("express-handlebars");
+const logger = require("morgan");
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 8080;
+const app = express();
+const PORT = process.env.PORT || 8080;
 
 // Requiring our models directory for syncing
-var db = require("./models");
+const db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -34,8 +34,8 @@ require("./routes/html-routes.js")(app);
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 // Remember, we use 'force: true' only while actively altering our data model 
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on http://localhost:" + PORT);
-  });
+db.sequelize.sync().then(() => {
+    app.listen(PORT, () => {
+        console.log(`App listening on http://localhost:${PORT}`);
+    });
 });

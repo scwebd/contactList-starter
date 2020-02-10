@@ -1,29 +1,29 @@
 <div>
-	<a class="nav-button btn btn-primary" href="/contacts/new" role="button">Add New Contact</a>
-	<h1>?????'s Contacts:</h1>
+    <a class="nav-button btn btn-primary" href="/contacts/new" role="button">Add New Contact</a>
+    <h1>?????'s Contacts:</h1>
 </div>
 <div class="form-group">
-	<label for="filterContacts">Filter by Type</label>
-	<select id="filterContacts" class="form-control" name="contactType">
-		<option disabled selected> -- select a type -- </option>
-		<option value="">All</option>
-		<option value="Personal">Personal</option>
-		<option value="Business">Business</option>
-	</select>
+    <label for="filterContacts">Filter by Type</label>
+    <select id="filterContacts" class="form-control" name="contactType">
+        <option disabled selected> -- select a type -- </option>
+        <option value="">All</option>
+        <option value="Personal">Personal</option>
+        <option value="Business">Business</option>
+    </select>
 </div>
-<table class="table">
-	<thead class="thead-dark">
-		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Contact Type</th>
-			<th>Phone Number</th>
-			<th>Email</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		{{!-- Our Handlebars code goes here! --}}
-		{{!-- <td><span class="delete glyphicon glyphicon-remove"></span></td> --}}
-	</tbody>
+<table class="contacts table">
+    <thead class="thead-dark">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contact Type</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{!-- Our Handlebars code goes here! --}}
+        {{!-- <td><span class="delete glyphicon glyphicon-remove"></span></td> --}}
+    </tbody>
 </table>
